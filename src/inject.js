@@ -61,6 +61,7 @@ WAPI.waitNewMessages(false, async (data) => {
             } else {
                 console.log("No partial match found");
             }
+            response = `*Automated reply*\n${response}`;
             WAPI.sendSeen(message.chatId._serialized);
             WAPI.sendMessage2(message.chatId._serialized, response);
             console.log();

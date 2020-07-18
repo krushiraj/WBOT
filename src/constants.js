@@ -2,6 +2,7 @@ var path=require("path");
 const WHATSAPP_WEB_URL = "https://web.whatsapp.com";
 this.DEFAULT_CHROMIUM_ARGS = [
     `--app=${WHATSAPP_WEB_URL}`,
+    "--headless",
     "--disable-gpu",
     "--renderer",
     "--no-sandbox",

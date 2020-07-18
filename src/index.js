@@ -129,7 +129,8 @@ async function Main() {
     async function checkLogin() {
         spinner.start("Page is loading");
         //TODO: avoid using delay and make it in a way that it would react to the event. 
-        await utils.delay(10000);
+        // await utils.delay(10000);
+        await page.waitForSelector("img[alt='Scan me!'], canvas");
         //console.log("loaded");
         var output = await page.evaluate("localStorage['last-wid']");
         //console.log("\n" + output);
